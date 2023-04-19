@@ -44,19 +44,20 @@ body {
 #title {
   font-size: 2.25rem;
   position: relative;
+  overflow: hidden;
+  text-align: center;
 
-  animation: titleAnimation 2s ease-in-out;
 }
 
 #title::after {
   position: absolute;
   content: "";
-  background-color: #a373cb;
-  width: 8rem;
+  width: 10rem;
   height: 3px;
   bottom: 0px;
-  left: 0px;
+  right: 0px;
   border-radius: 3px;
+  animation: h1animation 2s linear infinite alternate-reverse;
 }
 
 .input-box label {
@@ -165,13 +166,16 @@ body {
   color: #cbd5e1;
 }
 
-@keyframes titleAnimation {
+@keyframes h1animation {
   0% {
-    opacity: 0;
+    transform: translateX(0px);
+    background-color: #a373cb;
   }
 
   100% {
-    opacity: 1;
+    transform: translateX(-210px);
+    background-color: #a373cb;
+    
   }
 }
 

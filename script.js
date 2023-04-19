@@ -36,6 +36,7 @@ form.addEventListener('submit', (event) => {
     value.textContent = imc.replace(".", ",");
     document.querySelector('#description').textContent = description
   }
+
 })
 
 form.addEventListener('keypress', function (event) {
